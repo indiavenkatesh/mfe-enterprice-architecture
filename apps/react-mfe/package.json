@@ -1,0 +1,23 @@
+{
+  "name": "@mfe-demo/react-mfe",
+  "version": "1.0.0",
+  "scripts": {
+    "dev":     "MFE_MODE=local     rspack serve --config rspack.config.js",
+    "dev:fed": "MFE_MODE=fed-local rspack serve --config rspack.config.js",
+    "build":   "MFE_MODE=prod      rspack build --config rspack.config.js"
+  },
+  "dependencies": {
+    "@mfe-demo/domain": "workspace:*",
+    "@preact/signals-react": "^2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@module-federation/enhanced": "^0.4.0",
+    "@rspack/cli": "^0.7.0",
+    "@rspack/core": "^0.7.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.4.0"
+  }
+}

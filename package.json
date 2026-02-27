@@ -1,0 +1,15 @@
+{
+  "name": "mfe-auth-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev":     "concurrently -n backend,react,angular -c cyan,blue,red \"pnpm --filter @mfe-demo/backend dev\" \"pnpm --filter @mfe-demo/react-mfe dev\" \"pnpm --filter @mfe-demo/angular-mfe dev\"",
+    "dev:fed": "concurrently -n backend,react,angular -c cyan,blue,red \"pnpm --filter @mfe-demo/backend dev\" \"pnpm --filter @mfe-demo/react-mfe dev:fed\" \"pnpm --filter @mfe-demo/angular-mfe dev:fed\"",
+    "build":   "pnpm --filter @mfe-demo/domain build && pnpm --filter @mfe-demo/react-mfe build && pnpm --filter @mfe-demo/angular-mfe build",
+    "dev:backend": "pnpm --filter @mfe-demo/backend dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.4.0"
+  }
+}
